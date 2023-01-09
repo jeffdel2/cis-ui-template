@@ -8,15 +8,15 @@ It is part of the Auth Rocks developer workshop presented by [Okta](https://okta
 
 ```json
 {
-  "Okta CIS instance": "{ORG_URL}",
-  "clientId": "{CLIENT_ID}",
-  "clientSct": "{CLIENT_SECRET}"
+  "Okta CIS instance URL": "{ORG_URL}",
+  "Client ID": "{CLIENT_ID}",
+  "Client Secret": "{CLIENT_SECRET}"
 }
 ```
 
 ### Challenge 1
 
-1. Copy the {ORG_URL}, {CLIENT_ID}, and {CLIENT_SECRET} from the SPA app created in your tenant and paste in the **.okta.env** file.
+1. Copy the {ORG_URL}, {CLIENT_ID}, and {CLIENT_SECRET} from the web app created in your CIS tenant and paste in the **.okta.env** file.
 
 ### Challenge 2
 
