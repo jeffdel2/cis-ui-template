@@ -46,7 +46,7 @@ app.use(passport.session());
 let logout_url, id_token, am_token, decoded_am_token, decoded_id_token, decoded_am_token2;
 let _base = WELL_KNOWN_ENDPOINT.slice(-1) == '/' ? WELL_KNOWN_ENDPOINT.slice(0, -1) : WELL_KNOWN_ENDPOINT;
 axios
-  .get(`${_base}/oauth2/default/.well-known/oauth-authorization-server`)
+  .get(`${_base}`)
   .then(res => {
     if (res.status == 200) {
       let { issuer, authorization_endpoint, token_endpoint, userinfo_endpoint, end_session_endpoint } = res.data;
