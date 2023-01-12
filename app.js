@@ -12,7 +12,7 @@ var jwt_decode = require('jwt-decode');
 
 // Source and import environment variables
 require('dotenv').config({ path: '.okta.env' })
-const { ORG_URL, CLIENT_ID, CLIENT_SECRET } = process.env;
+const { ORG_URL, WELL_KNOWN_ENDPOINT, CLIENT_ID, CLIENT_SECRET } = process.env;
 
 var indexRouter = require('./routes/index');
 
@@ -44,7 +44,7 @@ app.use(passport.session());
 
 // https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationRequest
 let logout_url, id_token, am_token, decoded_am_token, decoded_id_token, decoded_am_token2;
-let _base = ORG_URL.slice(-1) == '/' ? ORG_URL.slice(0, -1) : ORG_URL;
+let _base = WELL_KNOWN_ENDPOINT.slice(-1) == '/' ? WELL_KNOWN_ENDPOINT.slice(0, -1) : WELL_KNOWN_ENDPOINT;
 axios
   .get(`${_base}/oauth2/default/.well-known/oauth-authorization-server`)
   .then(res => {
