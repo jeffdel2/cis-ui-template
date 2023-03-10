@@ -135,6 +135,7 @@ app.post('/logout', (req, res, next) => {
     if (err) { return next(err); }
     let params = {
       id_token_hint: id_token,
+      // Update logout URI to match your UI Application project URI *********
       post_logout_redirect_uri: 'https://authrocks-cis-ui-template.glitch.me/'
     }
     res.redirect(logout_url + '?' + qs.stringify(params));
