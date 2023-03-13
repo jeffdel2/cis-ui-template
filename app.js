@@ -60,7 +60,7 @@ axios
         userInfoURL: userinfo_endpoint,
         clientID: CLIENT_ID,
         clientSecret: CLIENT_SECRET,
-        callbackURL: 'https://authrocks-cis-ui-template.glitch.me/authorization-code/callback',
+        callbackURL: 'YOUR_UI_APP_URL_HERE/authorization-code/callback',
         scope: 'profile offline_access phone',
       }, (issuer, profile, context, idToken, accessToken, refreshToken, params, done) => {
         console.log(`OIDC response: ${JSON.stringify({
